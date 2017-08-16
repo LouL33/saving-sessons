@@ -1,0 +1,67 @@
+﻿@model TheMoviePlace.Models.ContactInformations
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Contact Information</h1>
+
+</div>
+<div class="test">
+    <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+        <div class="row">
+            <div class="col-sm-10">
+                <form id="main-contact-form" name="contact-form" method="post" action="#">
+                    <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="contact-name" class="col-sm-2 control-label">First Name</label>
+                                <input id="firstName" type="text" name="name" class="form-control" placeholder="First Name" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-name" class="col-sm-2 control-label">Last Name</label>
+                                <input id="lastName" name="Last name" class="form-control" placeholder="Last Name" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-name" class="col-sm-2 control-label">Email</label>
+                                <input id="eMail" type="email" name="email" class="form-control" placeholder="Email Address" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-name" class="col-sm-2 control-label">Address</label>
+                                <input id="address" type="text" name="Address" class="form-control" placeholder="Address" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-name" class="col-sm-2 control-label">Phone Number</label>
+                                <input id="phoneNumber" type="text" name="Phone Number" class="form-control" placeholder="Phone Number" required="required">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <button onclick="button" type="submit" class="btn-submit" data-target="#myModal">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Contct Information</h4>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tr> <td><b>First Name</b></td></tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
