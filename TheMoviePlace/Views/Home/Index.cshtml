@@ -17,11 +17,11 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="contact-name" class="col-sm-2 control-label">First Name</label>
-                                <input id="firstName" type="text" name="name" class="form-control" placeholder="First Name" required="required">
+                                <input id="firstName" type="text" name="firstName" class="form-control" placeholder="First Name" required="required">
                             </div>
                             <div class="form-group">
                                 <label for="contact-name" class="col-sm-2 control-label">Last Name</label>
-                                <input id="lastName" name="Last name" class="form-control" placeholder="Last Name" required="required">
+                                <input id="lastName" name="lastName" class="form-control" placeholder="Last Name" required="required">
                             </div>
                             <div class="form-group">
                                 <label for="contact-name" class="col-sm-2 control-label">Email</label>
@@ -33,13 +33,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="contact-name" class="col-sm-2 control-label">Phone Number</label>
-                                <input id="phoneNumber" type="text" name="Phone Number" class="form-control" placeholder="Phone Number" required="required">
+                                <input id="phoneNumber" type="text" name="PhoneNumber" class="form-control" placeholder="Phone Number" required="required">
                             </div>
                         </div>
 
                     </div>
                     <div class="form-group">
-                        <button onclick="button" type="submit" class="btn-submit" data-target="#myModal">Submit</button>
+                        <button onclick="myClickEvent()" type="button" class="btn-submit">Submit</button>
                     </div>
                 </form>
             </div>
@@ -47,20 +47,37 @@
     </div>
 </div>
 
-<div class="modal" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Contct Information</h4>
+                <h5 class="modal-title" id="exampleModalLabel">contact Information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 <table>
-                    <tr> <td><b>First Name</b></td></tr>
+                    <tr>
+                       First Name: @Model.firstName
+                    </tr>
+                    <tr>
+                        Last Name: @Model.lastName
+                    </tr>
+                    <tr>
+                        EMail: @Model.Email
+                    </tr>
+                    <tr>
+                        Address: @Model.Address
+                    </tr>
+                    <tr>
+                        PhoneNumber: @Model.PhoneNumber
+                    </tr>                 
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
             </div>
         </div>
     </div>

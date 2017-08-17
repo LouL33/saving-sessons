@@ -1,11 +1,10 @@
-﻿let buttton = () => {
-
-    let form = () => {
-        firstName = $("#firstName").val(),
-            lastName = $("#lastNmame").val(),
-            address = $("#address").val(),
-            eMail = $("#eMail").val(),
-            phoneNumber = $("#phonenumber")
+﻿var myClickEvent = () => {
+    let form = {
+        firstName : $("#firstName").val(),
+            lastName : $("#lastName").val(),
+            address : $("#address").val(),
+            eMail : $("#eMail").val(),
+            phoneNumber : $("#phonenumber").val()
     };
 
     $.ajax({
@@ -14,13 +13,10 @@
         data: JSON.stringify(form),
         type: "POST",
         dataType: "html",
-        success: (SessonId) => {
-
-            $("#myModel").html(SessonId)
-            $("#myModel").modal('show')
-
-        }
-       
+        success: (data) => {
+            $("#myModal").html(data)
+            $("#myModal").modal('show')
+        }       
     })
 };
 

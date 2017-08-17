@@ -12,10 +12,10 @@ namespace TheMoviePlace.Controllers
         public ActionResult Index(ContactInformations form)
         {
             Session["save"] = form;
-            var save = Session["save"].ToString();
+            var save = Session["save"];
 
             
-            return View();
+            return View(save);
         }
 
        
